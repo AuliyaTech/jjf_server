@@ -1,6 +1,13 @@
 const router = require("express").Router();
-const prismic = require("./prismic_api.js")
+const mailchimp = require("./api/mailchimp");
 
-router.use("/prismic", prismic);
+// Server test 
+// router.use("/", (req, res) =>{
+//     res.send("Server is Working");
+// })
+
+
+router.use("/mailchimp", mailchimp)
+
 
 module.exports = router;

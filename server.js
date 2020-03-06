@@ -3,7 +3,7 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes")
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -13,8 +13,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(routes);
+// router.use("/", res => res.send("Hello World"));outes);
+// const router = express.Router()
+// router.use("/", res => res.send("Hello World"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/api");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/api");
 
 
 app.listen(PORT, () => {
