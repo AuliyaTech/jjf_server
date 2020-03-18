@@ -13,11 +13,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(routes);
-// router.use("/", res => res.send("Hello World"));outes);
-// const router = express.Router()
-// routes.use("/", res => res.send("Hello World"));
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/api");
 
 
 app.listen(PORT, () => {
