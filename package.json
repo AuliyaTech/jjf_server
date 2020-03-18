@@ -26,6 +26,7 @@
     "mongoose": "^5.6.0",
     "prismic-javascript": "^2.1.5",
     "react": "^16.8.6",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "request": "^2.88.2"
   }
 }

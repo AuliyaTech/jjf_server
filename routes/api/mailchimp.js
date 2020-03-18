@@ -1,44 +1,35 @@
 const router = require("express").Router();
+const request = require("request")
+
+
 
 router.post('/signup', (req, res) => {
     const { firstName, email } = req.body;
   
     // Make sure fields are filled
-    if (!firstName || !lastName || !email) {
+    if (!firstName || !email) {
       return err;
     }
-  
-    // Construct req data
-    const data = {
-      members: [
-        {
-          EMAIL: email,
-          status: 'subscribed',
-          merge_fields: {
-            FNAME: firstName,
-          }
-        }
-      ]
-    };
-  
-    const postData = JSON.stringify(data);
-  
-    const options = {
-      url: 'https://us4.api.mailchimp.com/3.0/lists/ba9ebb6631',
-      method: 'POST',
-      headers: {
-        Authorization: 'auth fa71acd6d5b85a12072726f40c0133f7-us4'
-      },
-      body: postData
-    };
-  
-    request(options, (err, response, body) => {
-      if (err) {
-        res.status(401).send({success: false, msg: 'Registration failed.'})
-      } else {
-        res.status(200).send({success: true, msg: 'Regisrtation successful'})}
-        
+
+    var options = { method: 'POST',
+      url: 'https://us4.api.mailchimp.com/3.0/lists/ba9ebb6631/members',
+      headers: 
+       { 'Postman-Token': 'd7626dd0-7fb0-4289-b5ec-98db2502efc9',
+         'cache-control': 'no-cache',
+         Authorization: 'Basic YW55c3RyaW5nOmZhNzFhY2Q2ZDViODVhMTIwNzI3MjZmNDBjMDEzM2Y3LXVzNA==',
+         'Content-Type': 'application/json' },
+      body: 
+       { email_address: email,
+         status: 'subscribed',
+         merge_fields: { FNAME: firstName } },
+      json: true };
+    
+    request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+    
+      // console.log(body);
     });
+    
     res.send("mailchimp signup api");
   });
 
