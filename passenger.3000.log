@@ -1,0 +1,22 @@
+[ N 2020-05-18 13:00:05.9078 26024/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2020-05-18 13:00:05.9441 26026/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2020-05-18 13:00:05.9445 26026/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2020-05-18 13:00:05.9639 26026/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 26026
+[ N 2020-05-18 13:00:09.1063 26026/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 26054 output: 🌎 ==> API server now on port 3010!
+
+[ N 2020-05-18 13:18:46.1546 26026/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2020-05-18 13:18:46.1547 26026/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2020-05-18 13:18:46.1547 26026/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 26054, application /Users/maria/AuliyaWomen/JJF_MERN (development)
+[ N 2020-05-18 13:18:46.1549 26026/T8 Ser/Server.h:901 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2020-05-18 13:18:46.1549 26026/Tc Ser/Server.h:901 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2020-05-18 13:18:46.1549 26026/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2020-05-18 13:18:46.1549 26026/Ta Ser/Server.h:901 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2020-05-18 13:18:46.1550 26026/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2020-05-18 13:18:46.1549 26026/Te Ser/Server.h:901 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2020-05-18 13:18:46.1550 26026/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2020-05-18 13:18:46.1550 26026/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2020-05-18 13:18:46.1552 26026/Tg Ser/Server.h:901 ]: [ApiServer] Freed 0 spare client objects
+[ N 2020-05-18 13:18:46.1553 26026/Tg Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2020-05-18 13:18:46.1556 26026/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 26054, application /Users/maria/AuliyaWomen/JJF_MERN (development)
+[ N 2020-05-18 13:18:47.0470 26026/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
